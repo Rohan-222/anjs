@@ -1,0 +1,45 @@
+<html ng-app="currconverterApp">
+<head>
+    <title>PROJECT-ANJS</title>
+    <script src="./angular.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div ng-controller="currconverterCtrl" class="wrapper">
+        <span>CURRENCY CONVERTER</span>
+        <p id="amt">Amount</p>
+        <input ng-model="amount" type="number" placeholder="Amount" min="1">
+        <div class="drop-list">
+        <div class="from">
+        <p>From</p>
+        <div class="select-box">
+            <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+        <select ng-model ="fromCurrency" class="FromCurrency">
+            <option value="">SELECT OPTION</option>
+            <option vaule ="usd">USD</option>
+            <option vaule ="ind">RUP</option>
+        </select>
+        </div>
+        </div>
+        <div class="exchange"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+        <div class="to">
+        <P>TO</P>
+        <div class="select-box">
+        <img src="https://flagsapi.com/IN/shiny/64.png" alt="">
+        <select ng-model ="toCurrency" class="toCurrency">
+            <option value="">SELECT OPTION</option>
+            <option vaule ="usd">USD</option>
+            <option vaule ="ind">RUP</option>
+        </select>
+        </div>
+        </div>
+        </div>
+        <div class="rate"> 1usd = 80 rupees</div>
+        <button>CONVERT</button>
+    </div>
+
+   
+</body>
+</html>
